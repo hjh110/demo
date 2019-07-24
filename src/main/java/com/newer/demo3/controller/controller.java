@@ -1,4 +1,4 @@
-package com.newer.demo3;
+package com.newer.demo3.controller;
 
 
 import com.newer.demo3.service.UploadService;

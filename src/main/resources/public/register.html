@@ -24,11 +24,9 @@
 
 		<div class="login form">
 			<div class="group">
-				<div class="group-ipt email">
-					<input type="email" name="email" id="email" class="ipt" placeholder="邮箱地址" required>
-				</div>
+
 				<div class="group-ipt user">
-					<input type="text" name="user" id="user" class="ipt" placeholder="选择一个用户名" required>
+					<input type="text" name="username" id="username" class="ipt" placeholder="选择一个用户名" required>
 				</div>
 				<div class="group-ipt password">
 					<input type="password" name="password" id="password" class="ipt" placeholder="设置登录密码" required>
@@ -37,7 +35,7 @@
 					<input type="password" name="password1" id="password1" class="ipt" placeholder="重复密码" required>
 				</div>
 				<div class="group-ipt verify">
-					<input type="text" name="verify" id="verify" class="ipt" placeholder="输入验证码" required>
+					<input type="text" name="verityCode" id="verityCode" class="ipt" placeholder="输入验证码" required>
 					<a href="javascript:void(0);" title="点击更换验证码">
 						<img id="imgVerify" src="login/getVerify" alt="更换验证码" height="36" width="170" onclick="getVerify(this);">
 					</a>
@@ -66,6 +64,48 @@
     function getVerify(obj){
          obj.src =  "login/getVerify?"+Math.random();//原生js方式
      }
+    $(function () {
+        $('#button').click(function () {
+            var username =$('#username').val()
+            var password =$('#password').val()
+			var password1 =$("#password1").val()
+            var verityCode=$("#verityCode").val()
+
+            if(!username){
+                layer.msg("用户名不能为空",{icon:9,time:1000});
+                return;
+            }
+
+            if(!password){
+                layer.msg("密码不能为空",{icon:10,time:1000});
+                return;
+            }
+
+
+            if (password!=password1){
+                layer.msg("两次密码不一致",{icon:10,time:1000});
+                return;
+			}
+
+            if(!verityCode){
+                verityCode.msg("验证码不能为空",{icon:5,time:1000});
+                return;
+            }
+        })
+        $.ajax({
+            url:"register",
+            type:'post',
+            dataType:'json',
+            data:{username: username, password: pwd},
+            success:function (data) {
+                if(data.flag){
+                    location.href="login.html";
+                }else{
+                    layer.msg(data.msg,{icon:2,time:1000});
+                }
+            }
+        })
+    })
 
 </script>
 </body>

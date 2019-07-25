@@ -14,11 +14,11 @@ public interface UploadMapper {
     public List<Upload> selAll();
 
     //登录
-    @Select("select username,pwd from user where username=#{username} and pwd=#{pwd}")
-    public Users longin(@Param("username") String username,
-                        @Param("pwd")String pwd);
+    @Select("select * from users where username=#{username} and pwd=#{pwd}")
+       Users longin(Users users);
+
     //注册
-    @Insert("insert into user (userid,username,pwd) values(null,#{username},#{pwd})")
-    public int register(Users users);
+    @Insert("insert into users (userid,username,pwd) values(null,#{username},#{pwd})")
+       int register(Users users);
 
 }

@@ -2,7 +2,9 @@ package com.newer.demo3.service;
 
 import com.newer.demo3.domain.Attention;
 import com.newer.demo3.domain.Upload;
+import com.newer.demo3.domain.Users;
 import com.newer.demo3.mapper.UploadMapper;
+import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +17,7 @@ public class UploadService {
     @Autowired
     private UploadMapper uploadMapper;
 
-    public List<Upload> selAll(){
-        return uploadMapper.selAll();
-    }
+
     //推荐方案1 先查出用户关注的人的作品和关注类型的作品
     public List<Integer> tui1(Integer id){
         return uploadMapper.tui1(id);
@@ -48,4 +48,15 @@ public class UploadService {
         return uploadMapper.invite(myid);
     }
 
+
+    //登录
+    public Users longin(Users users){
+        return uploadMapper.longin(users);
+    }
+
+
+    //注册
+    public int register(Users users){
+        return uploadMapper.register(users);
+    }
 }

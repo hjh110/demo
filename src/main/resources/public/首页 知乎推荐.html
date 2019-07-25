@@ -11,6 +11,7 @@
     <meta name="google-site-verification" content="FTeR0c8arOPKh8c5DYh_9uu98_zJbaWw53J-Sch9MTg">
     <link href="css/app.0cb07cb21df4dad82b4a.css" rel="stylesheet">
     <link href="css/topstory-routes.3e890a66e0ebef45bb38.css" rel="stylesheet">
+    <link href="css/modals.921c0a1f1b355210984a.css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/head.js"></script>
 </head>
@@ -476,7 +477,9 @@
 <script src="js/jquery-3.2.1.js"></script>
 
 <script>
-    $(() => {
+   $(()=>{
+
+
         $.ajax({
             type: "get",
             url: "recommend",
@@ -486,6 +489,7 @@
                 console.log(data);
                 var msg = ``;
                 $.each(data.list, (index, obj) => {
+
                     msg += `
 <div class="Card TopstoryItem TopstoryItem-isRecommend" tabindex="0">
         <div class="Feed" data-za-detail-view-path-module="FeedItem"
@@ -612,8 +616,8 @@
 
 
         <!---->
-
-      <div class="CommentsV2 CommentsV2--withEditor CommentsV2-withPagination"><div class="Topbar CommentTopbar"><div class="Topbar-title"><h2 class="CommentTopbar-title">49 条评论</h2></div><div class="Topbar-options"><button type="button" class="Button Button--plain Button--withIcon Button--withLabel"><span style="display: inline-flex; align-items: center;">&#8203;<svg class="Zi Zi--Switch Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M13.004 7V4.232c0-.405.35-.733.781-.733.183 0 .36.06.501.17l6.437 5.033c.331.26.376.722.1 1.033a.803.803 0 0 1-.601.264H2.75a.75.75 0 0 1-.75-.75V7.75A.75.75 0 0 1 2.75 7h10.254zm-1.997 9.999v2.768c0 .405-.35.733-.782.733a.814.814 0 0 1-.5-.17l-6.437-5.034a.702.702 0 0 1-.1-1.032.803.803 0 0 1 .6-.264H21.25a.75.75 0 0 1 .75.75v1.499a.75.75 0 0 1-.75.75H11.007z" fill-rule="evenodd"></path></svg></span>切换为时间排序</button>
+<br>
+      <div class="CommentsV2 CommentsV2--withEditor CommentsV2-withPagination" style="border: 1px solid #ebebeb;"><div class="Topbar CommentTopbar"><div class="Topbar-title"><h2 class="CommentTopbar-title">49 条评论</h2></div><div class="Topbar-options"><button type="button" class="Button Button--plain Button--withIcon Button--withLabel"><span style="display: inline-flex; align-items: center;">&#8203;<svg class="Zi Zi--Switch Button-zi" fill="currentColor" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path d="M13.004 7V4.232c0-.405.35-.733.781-.733.183 0 .36.06.501.17l6.437 5.033c.331.26.376.722.1 1.033a.803.803 0 0 1-.601.264H2.75a.75.75 0 0 1-.75-.75V7.75A.75.75 0 0 1 2.75 7h10.254zm-1.997 9.999v2.768c0 .405-.35.733-.782.733a.814.814 0 0 1-.5-.17l-6.437-5.034a.702.702 0 0 1-.1-1.032.803.803 0 0 1 .6-.264H21.25a.75.75 0 0 1 .75.75v1.499a.75.75 0 0 1-.75.75H11.007z" fill-rule="evenodd"></path></svg></span>切换为时间排序</button>
                     </div>
                 </div>
                 <div>
@@ -764,63 +768,97 @@
                     </div>
 
 
-<div class="Pagination CommentsV2-pagination"><button disabled="" type="button" class="Button PaginationButton PaginationButton--current Button--plain">1</button><button type="button" class="Button PaginationButton Button--plain">2</button><button type="button" class="Button PaginationButton Button--plain">3</button><button type="button" class="Button PaginationButton Button--plain">4</button><button disabled="" class="PaginationButton PaginationButton--ellipsis">...</button><button type="button" class="Button PaginationButton Button--plain">8</button><button type="button" class="Button PaginationButton PaginationButton-next Button--plain">下一页</button></div>
+<div class="Pagination CommentsV2-pagination" style="border-top: 1px solid #ebebeb;padding: 16px 20px;text-align: center;margin: 0 auto;">\
+<button disabled="" type="button" class="Button PaginationButton PaginationButton--current Button--plain">1</button><button type="button" class="Button PaginationButton Button--plain">2</button><button type="button" class="Button PaginationButton Button--plain">3</button><button type="button" class="Button PaginationButton Button--plain">4</button><button disabled="" class="PaginationButton PaginationButton--ellipsis">...</button><button type="button" class="Button PaginationButton Button--plain">8</button><button type="button" class="Button PaginationButton PaginationButton-next Button--plain">下一页</button></div>
                     <span></span></div>
 
-                <div class="CommentsV2-footer CommentEditorV2--normal CommentEditorV2--active">
-                    <div class="CommentEditorV2-inputWrap CommentEditorV2-inputWrap--active">
-                        <div class="CommentEditorV2-input Input-wrapper Input-wrapper--spread Input-wrapper--large Input-wrapper--noPadding">
-                            <div class="Input Editable">
-                                <div class="Dropzone RichText RichText--editable RichText--clearBoth ztext"
-                                     style="min-height: 198px;">
-                                    <div class="DraftEditor-root">
-                                        <div class="public-DraftEditorPlaceholder-root">
-                                            <div class="public-DraftEditorPlaceholder-inner" id="placeholder-15fgm"
-                                                 style="white-space: pre-wrap;">写下你的评论...
-                                            </div>
-                                        </div>
-                                        <div class="DraftEditor-editorContainer">
-                                            <div aria-describedby="placeholder-15fgm"
-                                                 class="notranslate public-DraftEditor-content" contenteditable="true"
-                                                 role="textbox" spellcheck="true" tabindex="0"
-                                                 style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;">
-                                                <div data-contents="true">
-                                                    <div class="Editable-unstyled" data-block="true" data-editor="15fgm"
-                                                         data-offset-key="emp09-0-0">
-                                                        <div data-offset-key="emp09-0-0"
-                                                             class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
-                                                            <span data-offset-key="emp09-0-0"><br
-                                                                    data-text="true"></span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input multiple="" type="file" accept="image/jpg,image/jpeg,image/png,image/gif"
-                                       style="display: none;">
-                                <div></div>
+
+<div class="CommentsV2-footer CommentEditorV2--normal" style="padding: 12px 20px;
+    background: #fff;
+    border-top: 1px solid #ebebeb;
+         position: relative;
+    -webkit-transition: padding-right .3s ease;
+    transition: padding-right .3s ease;">
+    <div class="CommentEditorV2-inputWrap" style="position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    background-color: #f6f6f6;">
+        <div class="CommentEditorV2-input Input-wrapper Input-wrapper--spread Input-wrapper--large Input-wrapper--noPadding"
+        style="border: none!important;
+    background: transparent!important;
+    overflow: hidden;
+    width: 100%;
+       padding: 0;
+       height: auto;
+    padding: 6px 12px;
+    font-size: 15px;
+     display: flex;
+      border-radius: 3px;
+      transition: background .2s,border .2s;
+     box-sizing: border-box;
+    ">
+            <div class="Input Editable" style="background: transparent;line-height: 24px;-webkit-box-flex: 1;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    padding: 0;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background: transparent;
+    border: none;
+    resize: none;">
+                <div class="Dropzone RichText RichText--editable RichText--clearBoth ztext" style="min-height: 198px;cursor: text;min-height: auto!important;padding: 6px 12px;position: relative; word-break: break-word;line-height: 1.6;">
+                    <div class="DraftEditor-root" style="cursor: text;">
+                        <div class="public-DraftEditorPlaceholder-root">
+                            <div class="public-DraftEditorPlaceholder-inner" id="placeholder-6tdrc"
+                                 style="white-space: pre-wrap;">写下你的评论...
                             </div>
                         </div>
-                        <div class="CommentEditorV2-inputUpload">
-                            <div class="CommentEditorV2-popoverWrap">
-                                <div class="Popover CommentEditorV2-inputUpLoad-Icon">
-                                    <button aria-label="插入表情" data-tooltip="插入表情" data-tooltip-position="bottom"
-                                            data-tooltip-will-hide-on-click="true" id="Popover2337-toggle"
-                                            aria-haspopup="true" aria-expanded="false" aria-owns="Popover2337-content"
-                                            type="button" class="Button Editable-control Button--plain">
-                                        <svg class="Zi Zi--Emotion" fill="currentColor" viewBox="0 0 24 24" width="24"
-                                             height="24">
-                                            <path d="M7.523 13.5h8.954c-.228 2.47-2.145 4-4.477 4-2.332 0-4.25-1.53-4.477-4zM12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-1.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15zm-3-8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
-                                        </svg>
-                                    </button>
+                        <div class="DraftEditor-editorContainer" style="cursor: text;    word-break: break-word;
+    line-height: 1.6;">
+                            <div aria-describedby="placeholder-6tdrc" class="notranslate public-DraftEditor-content"
+                                 contenteditable="true" role="textbox" spellcheck="true" tabindex="0"
+                                 style="outline: none; user-select: text; white-space: pre-wrap; overflow-wrap: break-word;">
+                                <div data-contents="true">
+                                    <div class="Editable-unstyled" data-block="true" data-editor="6tdrc"
+                                         data-offset-key="6crac-0-0">
+                                        <div data-offset-key="6crac-0-0"
+                                             class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"><span
+                                                data-offset-key="6crac-0-0"><br data-text="true"></span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button disabled="" type="button"
-                            class="Button CommentEditorV2-singleButton Button--primary Button--blue">发布
+                </div>
+                <input multiple="" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" style="display: none;">
+                <div></div>
+            </div>
+        </div>
+        <div class="CommentEditorV2-inputUpload">
+            <div class="CommentEditorV2-popoverWrap">
+                <div class="Popover CommentEditorV2-inputUpLoad-Icon">
+                    <button aria-label="插入表情" data-tooltip="插入表情" data-tooltip-position="bottom"
+                            data-tooltip-will-hide-on-click="true" id="Popover54-toggle" aria-haspopup="true"
+                            aria-expanded="false" aria-owns="Popover54-content" type="button"
+                            class="Button Editable-control Button--plain">
+                        <svg class="Zi Zi--Emotion" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M7.523 13.5h8.954c-.228 2.47-2.145 4-4.477 4-2.332 0-4.25-1.53-4.477-4zM12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-1.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15zm-3-8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+                        </svg>
                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="Button CommentEditorV2-singleButton Button--primary Button--blue" disabled="">发布
+    </button>
                 </div>
             </div>
         </div>
@@ -832,12 +870,15 @@
                         `
 
 
-                    $("#tuijian").html(msg);
-                })
 
+
+                })
+                $("#tuijian").html(msg);
             }
         })
-    })
+   })
+
+
         //点赞按钮的变化
         function dianliang(str, count) {
             if (str == "up") {

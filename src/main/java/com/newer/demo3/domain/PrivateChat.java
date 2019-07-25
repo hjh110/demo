@@ -1,6 +1,7 @@
 package com.newer.demo3.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class PrivateChat implements Serializable {
     private static final long serialVersionUID = -8783755139554301101L;
@@ -8,7 +9,9 @@ public class PrivateChat implements Serializable {
     private Integer userid;
     private Integer uploadid;
     private String text;
+    private Date chattime;
     private Integer Privateid2;
+
 
     public PrivateChat() {
     }

@@ -7,16 +7,17 @@ public class BrowsingRecord implements Serializable {
     private Integer attentionid;
     private Integer Myid;
     private Integer adverseid;
-    private Integer count;
+
+
 
     public BrowsingRecord() {
     }
 
-    public BrowsingRecord(Integer attentionid, Integer myid, Integer adverseid, Integer count) {
+    public BrowsingRecord(Integer attentionid, Integer myid, Integer adverseid) {
         this.attentionid = attentionid;
         Myid = myid;
         this.adverseid = adverseid;
-        this.count = count;
+
     }
 
     public Integer getAttentionid() {
@@ -43,11 +44,4 @@ public class BrowsingRecord implements Serializable {
         this.adverseid = adverseid;
     }
 
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
 }

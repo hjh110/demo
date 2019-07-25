@@ -12,6 +12,9 @@ public class UserInfo implements Serializable {
     private Integer userid;
     private Integer Phone;
 
+
+
+
     public UserInfo() {
     }
 

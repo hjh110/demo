@@ -8,6 +8,8 @@ public class Invite implements Serializable {
     private Integer uploadid;
     private Integer Userid;
 
+
+
     public Invite() {
     }
 

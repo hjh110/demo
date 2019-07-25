@@ -8,6 +8,8 @@ public class Collect implements Serializable {
     private String collectname;
     private Integer userid;
 
+
+
     public Collect() {
     }
 

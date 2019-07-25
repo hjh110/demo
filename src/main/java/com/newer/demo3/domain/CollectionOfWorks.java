@@ -8,6 +8,8 @@ public class CollectionOfWorks implements Serializable {
     private Integer collectid;
     private Integer uploadid;
 
+
+
     public CollectionOfWorks() {
     }
 

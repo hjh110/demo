@@ -8,17 +8,19 @@ public class Likes implements Serializable {
     private Integer type;
     private Integer myid;
     private Integer adverse;
-    private Integer likecount;
+
+
+
 
     public Likes() {
     }
 
-    public Likes(Integer likeid, Integer type, Integer myid, Integer adverse, Integer likecount) {
+    public Likes(Integer likeid, Integer type, Integer myid, Integer adverse) {
         this.likeid = likeid;
         this.type = type;
         this.myid = myid;
         this.adverse = adverse;
-        this.likecount = likecount;
+
     }
 
     public Integer getLikeid() {
@@ -53,11 +55,5 @@ public class Likes implements Serializable {
         this.adverse = adverse;
     }
 
-    public Integer getLikecount() {
-        return likecount;
-    }
 
-    public void setLikecount(Integer likecount) {
-        this.likecount = likecount;
-    }
 }

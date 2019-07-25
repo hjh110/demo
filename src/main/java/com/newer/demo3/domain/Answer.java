@@ -10,29 +10,31 @@ public class Answer implements Serializable {
     private Integer uploadid;
     private Integer Userid;
     private Integer Llikenum;
-    private Integer TextType;
+    private String text;
     private Integer browse;
     private String draft;
     private String audit;
     private Integer anonymity;
     private Integer comment;
 
+
     public Answer() {
     }
 
-    public Answer(Integer answerid, Date uploadTime, Integer uploadid, Integer userid, Integer llikenum, Integer textType, Integer browse, String draft, String audit, Integer anonymity, Integer comment) {
+    public Answer(Integer answerid, Date uploadTime, Integer uploadid, Integer userid, Integer llikenum, String text, Integer browse, String draft, String audit, Integer anonymity, Integer comment) {
         this.answerid = answerid;
         this.uploadTime = uploadTime;
         this.uploadid = uploadid;
         Userid = userid;
         Llikenum = llikenum;
-        TextType = textType;
+        this.text = text;
         this.browse = browse;
         this.draft = draft;
         this.audit = audit;
         this.anonymity = anonymity;
         this.comment = comment;
     }
+
 
     public Integer getAnswerid() {
         return answerid;
@@ -74,12 +76,16 @@ public class Answer implements Serializable {
         Llikenum = llikenum;
     }
 
-    public Integer getTextType() {
-        return TextType;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public void setTextType(Integer textType) {
-        TextType = textType;
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 
     public Integer getBrowse() {

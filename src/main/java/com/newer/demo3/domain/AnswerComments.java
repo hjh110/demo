@@ -10,23 +10,24 @@ public class AnswerComments implements Serializable {
     private Integer answerid;
     private Integer userid;
     private Integer llikenum;
-    private Integer textType;
+    private String  text;
     private String draft;
     private String audit;
     private Integer anonymity;
     private Integer acId2;
     private Integer type;
 
+
     public AnswerComments() {
     }
 
-    public AnswerComments(Integer acId, Date uploadTime, Integer answerid, Integer userid, Integer llikenum, Integer textType, String draft, String audit, Integer anonymity, Integer acId2, Integer type) {
+    public AnswerComments(Integer acId, Date uploadTime, Integer answerid, Integer userid, Integer llikenum, String text, String draft, String audit, Integer anonymity, Integer acId2, Integer type) {
         this.acId = acId;
         this.uploadTime = uploadTime;
         this.answerid = answerid;
         this.userid = userid;
         this.llikenum = llikenum;
-        this.textType = textType;
+        this.text = text;
         this.draft = draft;
         this.audit = audit;
         this.anonymity = anonymity;
@@ -74,12 +75,12 @@ public class AnswerComments implements Serializable {
         this.llikenum = llikenum;
     }
 
-    public Integer getTextType() {
-        return textType;
+    public String getText() {
+        return text;
     }
 
-    public void setTextType(Integer textType) {
-        this.textType = textType;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public String getDraft() {
